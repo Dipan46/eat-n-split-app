@@ -63,8 +63,6 @@ Add friends, track who owes who, and easily manage shared expenses. 🎉
 
 ---
 
----
-
 ## 📸 Preview
 
 ![Packing List App Preview](./preview/prev.png)
