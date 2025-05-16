@@ -4,6 +4,10 @@ A simple and fun **React** app to **split bills** with friends!
 Add friends, track who owes who, and easily manage shared expenses. 🎉
 
 ---
+## 🔍 Preview
+- Live - https://dipan46.github.io/eat-n-split-app/
+
+---
 
 ## ✨ Features
 - View a list of friends
@@ -56,8 +60,6 @@ Add friends, track who owes who, and easily manage shared expenses. 🎉
    ```bash
    npm run dev
    ```
-
----
 
 ---
 
