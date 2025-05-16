@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-function FormSplitBill({ selectedFriend, onSplitBill }) {
+function FormSplitBill({ selectedFriend, onSplitBill, key }) {
     const [bill, setBill] = useState("");
     const [paid, setPaid] = useState("");
     const [paying, setPaying] = useState("you");
@@ -15,7 +15,7 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
     }
 
     return (
-        <form className="form-split-bill" onSubmit={handleSubmit}>
+        <form key={key} className="form-split-bill" onSubmit={handleSubmit}>
             <h2>Split Bill With {selectedFriend.name}</h2>
 
             <label>💰Bill Value</label>

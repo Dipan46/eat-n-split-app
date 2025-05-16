@@ -1,6 +1,7 @@
 import "./App.css";
-import Button from "./assets/Button";
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
+import Button from "./assets/Button";
 import FriendsList from "./assets/FriendList";
 import FormSplitBill from "./assets/FormSplitBill";
 import FormAddFriends from "./assets/FormAddFriends";
@@ -84,6 +85,7 @@ function App() {
                 <FormSplitBill
                     selectedFriend={selectedFriend}
                     onSplitBill={handleSplitBill}
+                    key={uuidv4()}
                 />
             )}
         </div>
