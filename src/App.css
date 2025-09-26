@@ -170,7 +170,8 @@ form h2 {
 }
 
 @media screen and (max-width: 800px) {
-  .app{
+  .app {
     grid-template-columns: auto;
+    gap: 2rem;
   }
 }
