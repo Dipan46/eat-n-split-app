@@ -25,6 +25,25 @@ body {
   justify-content: center;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+}
+
+.cont {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d20000;
+}
+
 .app {
   min-height: 66vh;
   display: grid;

@@ -1,10 +1,11 @@
 import "./App.css";
 import { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import Button from "./assets/Button";
 import FriendsList from "./assets/FriendList";
 import FormSplitBill from "./assets/FormSplitBill";
 import FormAddFriends from "./assets/FormAddFriends";
+import Navbar from "./assets/Navbar";
 
 const initialFriends = [
     {
@@ -64,31 +65,34 @@ function App() {
     }
 
     return (
-        <div className="app">
-            <div className="sidebar">
-                <FriendsList
-                    friends={friends}
-                    onSelection={handleSelection}
-                    selectedFriend={selectedFriend}
-                />
+        <>
+            <Navbar />
+            <div className="app">
+                <div className="sidebar">
+                    <FriendsList
+                        friends={friends}
+                        onSelection={handleSelection}
+                        selectedFriend={selectedFriend}
+                    />
 
-                {showAddFriend && (
-                    <FormAddFriends onAddFriends={handleAddFriends} />
+                    {showAddFriend && (
+                        <FormAddFriends onAddFriends={handleAddFriends} />
+                    )}
+
+                    <Button handleClickAdd={handleClickAdd}>
+                        {showAddFriend ? "Close" : "Add Friend"}
+                    </Button>
+                </div>
+
+                {selectedFriend && (
+                    <FormSplitBill
+                        selectedFriend={selectedFriend}
+                        onSplitBill={handleSplitBill}
+                        key={uuidv4()}
+                    />
                 )}
-
-                <Button handleClickAdd={handleClickAdd}>
-                    {showAddFriend ? "Close" : "Add Friend"}
-                </Button>
             </div>
-
-            {selectedFriend && (
-                <FormSplitBill
-                    selectedFriend={selectedFriend}
-                    onSplitBill={handleSplitBill}
-                    key={uuidv4()}
-                />
-            )}
-        </div>
+        </>
     );
 }
 
